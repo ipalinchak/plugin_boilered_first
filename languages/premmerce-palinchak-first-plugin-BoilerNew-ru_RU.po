@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-11-07 21:26+0300\n"
+"PO-Revision-Date: 2017-11-07 21:26+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../views/admin/options.php:15
+msgid "Some checkbox"
+msgstr "Вибрати какой-то чекбоч"
+
+#: ../views/admin/options.php:30
+msgid "Some select"
+msgstr "какой -то селект"
+
+#: ../views/admin/options.php:41
+msgid "Description input"
+msgstr "Описание инпута"
+
+#: ../src/PluginBoilerNewPlugin.php:38
+msgid "TextVideo"
+msgstr "Текст видео"
+
+#: ../src/PluginBoilerNewPlugin.php:39
+msgid "VideosEn"
+msgstr "видео ру"
+
+#: ../src/Admin/AdminSettings.php:34
+msgid "Check some data"
+msgstr "Вибрати что то"
