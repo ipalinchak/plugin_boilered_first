@@ -29,6 +29,7 @@ class PluginBoilerNewPlugin {
         add_action( 'init', [$this,'custom_post_type'] );
         add_action( 'init', [ $this, 'loadTextDomain' ] );
         add_action('init', [$this, 'registerNewTaxonomy']);
+        add_action( 'admin_enqueue_scripts', [$this,'script_for_admin']);
 	}
 
     function custom_post_type() {
@@ -110,4 +111,24 @@ class PluginBoilerNewPlugin {
 	public static function uninstall() {
 		// TODO: Implement uninstall() method.
 	}
+
+    /**
+     * @return FileManager
+     */
+    public function script_for_admin($post)
+    {
+
+
+        if ( 'toplevel_page_plugin-slug-palOptions' == $post ) {
+            wp_register_script('optiion_pal_script_all_pages', $this->fileManager->locateAsset('admin/js/optiion_pal_script_all_pages.js'));
+            $options_for_script1 = ['data' => 'Script to only this page'];
+            wp_localize_script('optiion_pal_script_all_pages', 'object_name1', $options_for_script1);
+            wp_enqueue_script('optiion_pal_script_all_pages');
+        }else{
+            wp_register_script('optiion_pal_script_all_pages', $this->fileManager->locateAsset('admin/js/optiion_pal_script_all_pages.js'));
+            $options_for_script1 = ['data' => 'Script to all pages'];
+            wp_localize_script('optiion_pal_script_all_pages', 'object_name1', $options_for_script1);
+            wp_enqueue_script('optiion_pal_script_all_pages');
+        }
+    }
 }
